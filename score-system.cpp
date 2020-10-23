@@ -1,7 +1,5 @@
-//會有四捨六入五成雙的狀況
-//我懶得修:P
-//應該是不會影響排名
-//但是會影響平均:PP
+//修正四捨六入五成雙
+//尚未測試過
 
 #include <bits/stdc++.h> //黑科技 : 萬用函式庫
 #define endl '\n'
@@ -40,8 +38,8 @@ int main()
     while((cout << "請依序輸入座號，國文，英文，數學，歷史，地理，地科，物理，化學成績" << endl) && (count < 48 /*班級人數*/))
     {
         cin >> num >> ch >> en >> ma >> his >> geo >> ear >> phy >> che; //輸入 
-        double average = aver(ch, en, ma, his, geo, ear, phy, che); //算平均 
-        cout << fixed << setprecision(2) << "你的總平均為: " << average << endl;
+        double average = round(aver(ch, en, ma, his, geo, ear, phy, che)*100) / 100; //算平均 
+        cout << "你的總平均為: " << average << endl;
         count++; //人數+1
         cla.push_back(make_pair(num, average)); //把這個人的成績丟進vector
     }
@@ -50,8 +48,8 @@ int main()
     //輸出vector
     for(unsigned int a = 0; a < cla.size(); a++)
     {
-        cout << fixed << setprecision(2) << cla[a].first << " " << cla[a].second << endl; //輸出
-        output << fixed << setprecision(2) << cla[a].first << " " << cla[a].second << endl; //丟進txt檔
+        cout << cla[a].first << " " << cla[a].second << endl; //輸出
+        output << cla[a].first << " " << cla[a].second << endl; //丟進txt檔
     } 
     
  }
