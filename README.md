@@ -15,7 +15,7 @@
 
 [相關圖片](https://i.imgur.com/wc7B2H6.png)
 ### 程式碼
-```cpp=
+```cpp
 //修正四捨六入五成雙
 
 #include <bits/stdc++.h> //黑科技 : 萬用函式庫
@@ -71,8 +71,6 @@ int main()
     
  }
 ```
-
-> [name=YuYu][time=Tue, October 27, 2020 2:07 PM]
 
 ---
 ## 隨機座位系統
