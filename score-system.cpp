@@ -39,7 +39,7 @@ int main()
     {
         cin >> num >> ch >> en >> ma >> his >> geo >> ear >> phy >> che; //輸入 
         double average = round(aver(ch, en, ma, his, geo, ear, phy, che)*100) / 100; //算平均 
-        cout << "你的總平均為: " << average << endl;
+        cout << fixed << setprecision(2) << "你的總平均為: " << average << endl;
         count++; //人數+1
         cla.push_back(make_pair(num, average)); //把這個人的成績丟進vector
     }
@@ -48,8 +48,8 @@ int main()
     //輸出vector
     for(unsigned int a = 0; a < cla.size(); a++)
     {
-        cout << cla[a].first << " " << cla[a].second << endl; //輸出
-        output << cla[a].first << " " << cla[a].second << endl; //丟進txt檔
+        cout << fixed << setprecision(2) << cla[a].first << " " << cla[a].second << endl; //輸出
+        output << fixed << setprecision(2) << cla[a].first << " " << cla[a].second << endl; //丟進txt檔
     } 
     
  }
